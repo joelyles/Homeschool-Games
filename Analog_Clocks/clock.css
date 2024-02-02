@@ -25,7 +25,11 @@ body {
 }
 
 .clocks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid red;
+    border-radius: 10px;
     height: var(--content-height);
     width: var(--content-width);
     padding: var(--content-padding);
@@ -33,11 +37,40 @@ body {
 }
 
 .entry-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border: 2px solid blue;
     height: var(--content-height);
     width: var(--content-width);
     padding: var(--content-padding);
     margin: var(--content-margin);
+}
+
+#answer {
+    height: 2rem;
+    width: 6rem;
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+.enter {
+    margin: 10px;
+    padding: 10px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.enter:hover {
+    transform: scale(1.1);
+}
+
+.enter:active {
+    transform: scale(.99);
 }
 
 .progress-container {
