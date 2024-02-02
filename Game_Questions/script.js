@@ -35,8 +35,9 @@ const spellingResult = document.querySelector('.s-container');
 const spellingWords = [
     {
         word: `cat`,
-        displayedWord: `cat`
-    },  {
+        // cat photo by Kabo on Unsplash
+        pic:   `<img scr="images/kabo.jpg"/>`
+    }/* ,  {
         word: `horse`,
         displayedWord: `horse`
     },  {
@@ -57,7 +58,7 @@ const spellingWords = [
     },  {
         word: `boat`,
         displayedWord: `boat`
-    }, 
+    },  */
 ];
 
 // math facts
@@ -95,12 +96,12 @@ const mathFacts = [
 /* logic below */
 
 let random = Math.floor(Math.random() * clockFaces.length);
-let randomWords = Math.floor(Math.random() * spellingWords.length)
-let randomMath = Math.floor(Math.random() * mathFacts.length)
+let randomWords = Math.floor(Math.random() * spellingWords.length);
+let randomMath = Math.floor(Math.random() * mathFacts.length);
 
 window.addEventListener('load', function(){
     clocks.innerHTML = clockFaces[random].displayedTime;
-    spelling.innerHTML = spellingWords[randomWords].displayedWord;
+    spelling.innerHTML = spellingWords[randomWords].word;
     math.innerHTML = mathFacts[randomMath].question;
 });
 
@@ -117,7 +118,7 @@ timeBtn.addEventListener('click', function(){
 });
 
 spellingBtn.addEventListener('click', function(){
-    if(spellingInput.value === spellingWords[randomWords].displayedWord){
+    if(spellingInput.value === spellingWords[randomWords].word){
         spellingResult.textContent = "correct!";
         spellingResult.style.color = "green";
         spellingResult.style.fontSize = "32px"

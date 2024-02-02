@@ -82,3 +82,6 @@ body {
 .math-enter:active {
     transform: scale(.99);
 }
+img {
+    display: block;
+}
