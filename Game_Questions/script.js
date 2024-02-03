@@ -159,3 +159,9 @@ mathBtn.addEventListener('click', function() {
         mathResult.style.fontSize = "32px"
     }
 });
+
+const reload = document.querySelector('.reload');
+
+reload.addEventListener('click', function(){
+    location.reload();
+});

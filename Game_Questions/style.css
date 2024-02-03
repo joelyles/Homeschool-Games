@@ -8,10 +8,10 @@
 
 body {
     font-family: 'Nunito Sans', sans-serif;
-    border: 4px solid black;
+    /* border: 4px solid black;
     border-radius: 15px;
     margin: 10px;
-    height: 100vh;
+    height: 100vh; */
 }
 
 .game-container {
@@ -27,6 +27,7 @@ body {
 }
 
 .left-container {
+    font-size: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +49,18 @@ body {
     width: var(--content-width);
     padding: var(--content-padding);
     margin: var(--content-margin);
+}
+
+input {
+    background-color: lightblue;
+} 
+
+input:focus {
+    outline-width: 0;
+}
+
+input::placeholder {
+    font-size: 20px;
 }
 
 #time-answer,
@@ -84,7 +97,29 @@ body {
 }
 img {
     display: block;
-    width: 200px;
+    width: 300px;
+    overflow: hidden;
     border: 2px solid red;
-    border-radius: 50%;
+    
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reload {
+   font-size: 6rem;
+   width: 6rem;
+   height: 6rem;
+   background-color: transparent;
+   border: none;
+}
+
+.reload:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.reload:active {
+    transform: scale(1);
 }
