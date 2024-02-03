@@ -84,4 +84,7 @@ body {
 }
 img {
     display: block;
+    width: 200px;
+    border: 2px solid red;
+    border-radius: 50%;
 }

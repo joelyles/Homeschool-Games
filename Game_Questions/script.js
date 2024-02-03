@@ -1,6 +1,6 @@
 // clocks
 
-const clocks = document.querySelector('.clocks');
+const clocks = document.querySelector('.clock-face');
 const timeInput = document.getElementById('time-answer');
 const timeBtn = document.querySelector('.time-enter');
 const timeResult = document.querySelector('.c-container');
@@ -9,17 +9,29 @@ const timeResult = document.querySelector('.c-container');
 
 const clockFaces = [
     {
-        time: `12:00`,
-        displayedTime: `12:00`
+        time: `1200`,
+        picture: `<img src="images/clocks12.jpg"/>`
     },  {
-        time: `1:30`,
-        displayedTime: `1:30`
+        time: `130`,
+        picture: `<img src="images/clocks130.jpg"/>`
     },  {
-        time: `3:00`,
-        displayedTime: `3:00`
+        time: `430`,
+        picture: `<img src="images/clocks430.jpg"/>`
     },  {
-        time: `5:30`,
-        displayedTime: `5:30`
+        time: `830`,
+        picture: `<img src="images/clocks830.jpg"/>`
+    },  {
+        time: `1030`,
+        picture: `<img src="images/clocks1030.jpg"/>`
+    },  {
+        time: `500`,
+        picture: `<img src="images/clocks5.jpg"/>`
+    },  {
+        time: `900`,
+        picture: `<img src="images/clocks9.jpg"/>`
+    }, {
+        time: `1100`,
+        picture: `<img src="images/clocks11.jpg"/>`
     }, 
 ];
 
@@ -36,29 +48,36 @@ const spellingWords = [
     {
         word: `cat`,
         // cat photo by Kabo on Unsplash
-        pic:   `<img scr="images/kabo.jpg"/>`
-    }/* ,  {
+        pic:   `<img src="images/kabo.jpg"/>`
+    } ,  {
         word: `horse`,
-        displayedWord: `horse`
+        pic:   `<img src="images/magdalena-smolnicka.jpg"/>`
+        // horse photo by Magdalena Smolnicka on Unsplash
     },  {
         word: `barn`,
-        displayedWord: `barn`
+        pic: `<img src="images/remmington-wanner.jpg"/>`
+        // barn photo by Remmington Wanner on Unsplash
     },  {
         word: `mouse`,
-        displayedWord: `mouse`
+        pic: `<img src="images/glen-hooper.jpg"/>`
+        // mouse photo by Glen Hooper on Unsplash
     },  {
         word: `bat`,
-        displayedWord: `bat`
+        pic: `<img src="images/geoff-brooks.jpg"/>`
+        // bat photo by Geoff Brooks on Unsplash
     },  {
         word: `bird`,
-        displayedWord: `bird`
+        pic: `<img src="images/timothy-dykes.jpg"/>`
+        // bird photo by Timothy Dykes on Unsplash
     },  {
-        word: `snake`,
-        displayedWord: `snake`
+        word: `deer`,
+        pic: `<img src="images/laura-college.jpg"/>`
+        // deer photo by Laura College on Unsplash
     },  {
         word: `boat`,
-        displayedWord: `boat`
-    },  */
+        pic: `<img src="images/dusan-veverkolog.jpg"/>`
+        // boat photo by Dusan Veverkolog on Unsplash
+    },
 ];
 
 // math facts
@@ -100,13 +119,13 @@ let randomWords = Math.floor(Math.random() * spellingWords.length);
 let randomMath = Math.floor(Math.random() * mathFacts.length);
 
 window.addEventListener('load', function(){
-    clocks.innerHTML = clockFaces[random].displayedTime;
-    spelling.innerHTML = spellingWords[randomWords].word;
+    clocks.innerHTML = clockFaces[random].picture;
+    spelling.innerHTML = spellingWords[randomWords].pic;
     math.innerHTML = mathFacts[randomMath].question;
 });
 
 timeBtn.addEventListener('click', function(){
-    if(timeInput.value === clockFaces[random].displayedTime){
+    if(timeInput.value === clockFaces[random].time){
         timeResult.textContent = "correct!";
         timeResult.style.color = "green";
         timeResult.style.fontSize = "32px"
