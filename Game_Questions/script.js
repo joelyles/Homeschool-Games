@@ -1,9 +1,13 @@
+// work on reload to top functionality
+
+
 // clocks
 
 const clocks = document.querySelector('.clock-face');
 const timeInput = document.getElementById('time-answer');
 const timeBtn = document.querySelector('.time-enter');
 const timeResult = document.querySelector('.c-container');
+const clockBg = document.getElementById('clock-entry');
 
         //add photos to display clock faces
 
@@ -41,6 +45,7 @@ const spelling = document.querySelector('.spelling');
 const spellingInput = document.getElementById('spelling-answer');
 const spellingBtn = document.querySelector('.spelling-enter');
 const spellingResult = document.querySelector('.s-container');
+const spellingBg = document.getElementById('spelling-entry');
 
         //add photos to spelling words
 
@@ -117,6 +122,12 @@ const mathFacts = [
 let random = Math.floor(Math.random() * clockFaces.length);
 let randomWords = Math.floor(Math.random() * spellingWords.length);
 let randomMath = Math.floor(Math.random() * mathFacts.length);
+const mathBg = document.getElementById('math-entry');
+
+let sectionTwo = document.getElementById('two');
+let sectionThree = document.getElementById('three');
+let sectionFour = document.getElementById('four');
+let sectionOne = document.getElementById('one');
 
 window.addEventListener('load', function(){
     clocks.innerHTML = clockFaces[random].picture;
@@ -127,36 +138,52 @@ window.addEventListener('load', function(){
 timeBtn.addEventListener('click', function(){
     if(timeInput.value === clockFaces[random].time){
         timeResult.textContent = "correct!";
+
+        clockBg.style.backgroundColor = '#7cfc00';
+
         timeResult.style.color = "green";
-        timeResult.style.fontSize = "32px"
+        timeResult.style.fontSize = "48px"
+        sectionTwo.scrollIntoView({behavior: 'smooth'});
     } else {
         timeResult.textContent = "sorry, try again."
         timeResult.style.color = "red";
-        timeResult.style.fontSize = "32px"
+        timeResult.style.fontSize = "48px";
+        timeInput.value = "";
     }
 });
 
 spellingBtn.addEventListener('click', function(){
     if(spellingInput.value === spellingWords[randomWords].word){
         spellingResult.textContent = "correct!";
+
+        spellingBg.style.backgroundColor = '#7cfc00';
+
         spellingResult.style.color = "green";
-        spellingResult.style.fontSize = "32px"
+        spellingResult.style.fontSize = "48px"
+        sectionThree.scrollIntoView({behavior: 'smooth'});
     } else {
         spellingResult.textContent = "sorry, try again.";
         spellingResult.style.color = "red";
-        spellingResult.style.fontSize = "32px"
+        spellingResult.style.fontSize = "48px"
+        spellingInput.value = "";
     }
 });
 
 mathBtn.addEventListener('click', function() {
     if(mathInput.value === mathFacts[randomMath].answer) {
         mathResult.innerHTML = 'correct!';
+
+        mathBg.style.backgroundColor = '#7cfc00';
+        
         mathResult.style.color = "green";
-        mathResult.style.fontSize = "32px"
+        mathResult.style.fontSize = "48px"
+
+        sectionFour.scrollIntoView({behavior: 'smooth'});
     } else {
         mathResult.innerHTML = 'sorry, try again';
         mathResult.style.color = "red";
-        mathResult.style.fontSize = "32px"
+        mathResult.style.fontSize = "48px"
+        mathInput.value = "";
     }
 });
 
@@ -164,4 +191,12 @@ const reload = document.querySelector('.reload');
 
 reload.addEventListener('click', function(){
     location.reload();
+    sectionOne.scrollIntoView({behavior: 'smooth'});
 });
+
+const newContainer = document.querySelector('.new-container');
+/* const backgrounds = document.querySelector(.) */
+
+if(newContainer.innerHTML === "correct!") {
+    document.body.style.backgroundColor = 'pink';
+};
