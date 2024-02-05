@@ -91,6 +91,7 @@ const math = document.querySelector('.math');
 const mathInput = document.getElementById('math-answer');
 const mathBtn = document.querySelector('.math-enter');
 const mathResult = document.querySelector('.m-container');
+const mathBg = document.getElementById('math-entry');
 
 const mathFacts = [
     {
@@ -122,12 +123,13 @@ const mathFacts = [
 let random = Math.floor(Math.random() * clockFaces.length);
 let randomWords = Math.floor(Math.random() * spellingWords.length);
 let randomMath = Math.floor(Math.random() * mathFacts.length);
-const mathBg = document.getElementById('math-entry');
 
-let sectionTwo = document.getElementById('two');
-let sectionThree = document.getElementById('three');
-let sectionFour = document.getElementById('four');
-let sectionOne = document.getElementById('one');
+
+const sectionTwo = document.getElementById('two');
+const sectionThree = document.getElementById('three');
+const sectionFour = document.getElementById('four');
+const sectionOne = document.getElementById('one');
+const headerTop = document.getElementById('top');
 
 window.addEventListener('load', function(){
     clocks.innerHTML = clockFaces[random].picture;
@@ -190,8 +192,9 @@ mathBtn.addEventListener('click', function() {
 const reload = document.querySelector('.reload');
 
 reload.addEventListener('click', function(){
-    location.reload();
-    sectionOne.scrollIntoView({behavior: 'smooth'});
+    
+    headerTop.scrollIntoView({behavior: 'smooth'});
+    /* location.reload(); */
 });
 
 const newContainer = document.querySelector('.new-container');
