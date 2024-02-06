@@ -1,4 +1,5 @@
 // work on reload to top functionality
+// clock face images to .svg
 
 
 // clocks
@@ -13,6 +14,9 @@ const clockBg = document.getElementById('clock-entry');
 
 const clockFaces = [
     {
+        time: `test`,
+        picture: `<img src="images/clocks.png"/>`
+    },  {
         time: `1200`,
         picture: `<img src="images/clocks12.jpg"/>`
     },  {
@@ -183,7 +187,9 @@ mathBtn.addEventListener('click', function() {
         sectionFour.scrollIntoView({behavior: 'smooth'});
     } else {
         mathResult.innerHTML = 'sorry, try again';
-        mathResult.style.color = "red";
+        mathResult.style.color = "#AA767C";
+        mathResult.style.backgroundColor = "#FFFFFF";
+        mathResult.style.borderRadius = "10px";
         mathResult.style.fontSize = "48px"
         mathInput.value = "";
     }
