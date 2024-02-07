@@ -44,7 +44,7 @@ const clockFaces = [
 ];
 
 // spelling
-
+/* 
 const spelling = document.querySelector('.spelling');
 const spellingInput = document.getElementById('spelling-answer');
 const spellingBtn = document.querySelector('.spelling-enter');
@@ -87,10 +87,11 @@ const spellingWords = [
         pic: `<img src="images/dusan-veverkolog.jpg"/>`
         // boat photo by Dusan Veverkolog on Unsplash
     },
-];
+]; */
 
 // math facts
 
+/*
 const math = document.querySelector('.math');
 const mathInput = document.getElementById('math-answer');
 const mathBtn = document.querySelector('.math-enter');
@@ -120,25 +121,24 @@ const mathFacts = [
         question: `7 + 1`,
         answer: `8`
     }, 
-];
-
-/* logic below */
+]; 
+*/
 
 let random = Math.floor(Math.random() * clockFaces.length);
-let randomWords = Math.floor(Math.random() * spellingWords.length);
-let randomMath = Math.floor(Math.random() * mathFacts.length);
+/* let randomWords = Math.floor(Math.random() * spellingWords.length); */
+/* let randomMath = Math.floor(Math.random() * mathFacts.length); */
 
 
-const sectionTwo = document.getElementById('two');
+/* const sectionTwo = document.getElementById('two');
 const sectionThree = document.getElementById('three');
 const sectionFour = document.getElementById('four');
 const sectionOne = document.getElementById('one');
-const headerTop = document.getElementById('top');
+const headerTop = document.getElementById('top'); */
 
 window.addEventListener('load', function(){
     clocks.innerHTML = clockFaces[random].picture;
-    spelling.innerHTML = spellingWords[randomWords].pic;
-    math.innerHTML = mathFacts[randomMath].question;
+    //spelling.innerHTML = spellingWords[randomWords].pic;
+    //math.innerHTML = mathFacts[randomMath].question;
 });
 
 timeBtn.addEventListener('click', function(){
@@ -149,7 +149,7 @@ timeBtn.addEventListener('click', function(){
 
         timeResult.style.color = "green";
         timeResult.style.fontSize = "48px"
-        sectionTwo.scrollIntoView({behavior: 'smooth'});
+        /* sectionTwo.scrollIntoView({behavior: 'smooth'}); */
     } else {
         timeResult.textContent = "sorry, try again."
         timeResult.style.color = "red";
@@ -158,8 +158,8 @@ timeBtn.addEventListener('click', function(){
     }
 });
 
-spellingBtn.addEventListener('click', function(){
-    if(spellingInput.value === spellingWords[randomWords].word){
+/* spellingBtn.addEventListener('click', function(){
+    if(spellingInput.value.toLowerCase() === spellingWords[randomWords].word){
         spellingResult.textContent = "correct!";
 
         spellingBg.style.backgroundColor = '#7cfc00';
@@ -173,9 +173,9 @@ spellingBtn.addEventListener('click', function(){
         spellingResult.style.fontSize = "48px"
         spellingInput.value = "";
     }
-});
+}); */
 
-mathBtn.addEventListener('click', function() {
+/* mathBtn.addEventListener('click', function() {
     if(mathInput.value === mathFacts[randomMath].answer) {
         mathResult.innerHTML = 'correct!';
 
@@ -193,19 +193,24 @@ mathBtn.addEventListener('click', function() {
         mathResult.style.fontSize = "48px"
         mathInput.value = "";
     }
-});
+}); */
+
 
 const reload = document.querySelector('.reload');
-
 reload.addEventListener('click', function(){
-    
-    headerTop.scrollIntoView({behavior: 'smooth'});
-    /* location.reload(); */
+    location.reload();
 });
 
-const newContainer = document.querySelector('.new-container');
-/* const backgrounds = document.querySelector(.) */
+/* in progress */
+        /* reload.addEventListener('mouseup', function(){
+            location.reload();
+            headerTop.scrollIntoView({behavior: 'smooth'});
+            
+        });
 
-if(newContainer.innerHTML === "correct!") {
-    document.body.style.backgroundColor = 'pink';
-};
+        const newContainer = document.querySelector('.new-container');
+        const backgrounds = document.querySelector(.)
+
+        if(newContainer.innerHTML === "correct!") {
+            document.body.style.backgroundColor = 'pink';
+        }; */
