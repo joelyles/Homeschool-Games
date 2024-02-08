@@ -6,8 +6,6 @@ const spellingBtn = document.querySelector('.spelling-enter');
 const spellingResult = document.querySelector('.s-container');
 const spellingBg = document.getElementById('spelling-entry');
 
-        //add photos to spelling words
-
 const spellingWords = [
     {
         word: `cat`,
