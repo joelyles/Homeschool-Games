@@ -53,7 +53,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid red; */
+    flex-direction: column;
+    border: 2px solid red;
     border-radius: 10px;
     height: var(--content-height);
     width: var(--content-width);
