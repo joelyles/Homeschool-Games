@@ -8,7 +8,7 @@ const timeBtn = document.querySelector('.time-enter');
 const timeResult = document.querySelector('.c-container');
 const clockBg = document.getElementById('clock-entry');
 
-const gameBox = document.querySelector('.game-container-one');
+const gameBox = document.querySelector('.main-container');
 const mainContainer = document.querySelector('.m-container');
 
 const clockFaces = [
@@ -70,12 +70,13 @@ window.addEventListener('load', function(){
         submitButton.innerHTML = 'submit';
         submitButton.classList.add('time-enter');
 
-
-        submitButton.addEventListener('click', function(){
-            if(entryInput.value === clockFaces[i].time){
-                console.log('it worked!');
-            }
-        });
+        const gameContainerOne = document.querySelector('.game-container-one');
+            submitButton.addEventListener('click', function(){
+                if(entryInput.value === clockFaces[i].time){
+            
+                    gameContainerOne.style.background = "linear-gradient(#74E365, #008000)";
+                }
+            });
     }
 });
 
