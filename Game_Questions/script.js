@@ -70,14 +70,13 @@ window.addEventListener('load', function(){
         submitButton.innerHTML = 'submit';
         submitButton.classList.add('time-enter');
 
-        const gameContainerOne = document.querySelector('.game-container-one');
+        const gameContainerOne = document.querySelectorAll('.game-container-one');
             submitButton.addEventListener('click', function(){
                 if(entryInput.value === clockFaces[i].time){
-            
-                    gameContainerOne.style.background = "linear-gradient(#74E365, #008000)";
-                }
+                    gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)";         
+                }    
             });
-    }
+    };
 });
 
 
