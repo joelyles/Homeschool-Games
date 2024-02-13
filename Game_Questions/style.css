@@ -10,17 +10,27 @@ header {
     display: flex;
     align-items: top;
     justify-content: space-between;
+    box-shadow: 0 0 10px;
+    border: 1px solid red;
 }
 
 .nav-line {
     display: flex;
     flex-direction: row;
+    border-radius: 40px;
+    box-shadow: 0 0 10px;
 }
 
-li.nav-buttons {
-    margin: 0px 15px;
-    list-style: none;
+.nav-buttons a {
     text-decoration: none;
+}
+
+.nav-buttons {
+    list-style: none;
+    margin: 10px 15px;
+    padding: 10px;
+    border-radius: 40px;
+    box-shadow: 0 0 4px;
 }
 
 main {
