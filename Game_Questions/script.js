@@ -17,30 +17,38 @@ const clockFaces = [
         picture: `<img src="images/clocks.png"/>`
     },   */
     {
+        question: `1`,
         time: `1200`,
         picture: `<img src="images/clocks12.jpg"/>`
     },  {
+        question: 2,
         time: `130`,
         picture: `<img src="images/clocks130.jpg"/>`
     },  {
+        question: 3,
         time: `430`,
         picture: `<img src="images/clocks430.jpg"/>`
-    },/*   {
+    },   {
+        question: 4,
         time: `830`,
         picture: `<img src="images/clocks830.jpg"/>`
     },  {
+        question: 5,
         time: `1030`,
         picture: `<img src="images/clocks1030.jpg"/>`
     },  {
+        question: 6,
         time: `500`,
         picture: `<img src="images/clocks5.jpg"/>`
     },  {
+        question: 7,
         time: `900`,
         picture: `<img src="images/clocks9.jpg"/>`
     }, {
+        question: 8,
         time: `1100`,
         picture: `<img src="images/clocks11.jpg"/>`
-    },  */
+    },
 ];
 
 /* let random = Math.floor(Math.random() * clockFaces.length);
@@ -54,10 +62,15 @@ window.addEventListener('load', function(){
         let entryBoxDiv = document.createElement('div');
         let entryInput = document.createElement('input');
         let submitButton = document.createElement('button');
+        const questionNumber = document.createElement('div');
 
         newDiv.innerHTML = clockFaces[i].picture;
         gameBox.append(newDiv);
         newDiv.classList.add('game-container-one');
+
+        questionNumber.innerHTML = clockFaces[i].question;
+        newDiv.append(questionNumber);
+        questionNumber.classList.add('question-number');
 
         entryBoxDiv.innerHTML = 'type answer below';
         newDiv.append(entryBoxDiv);
