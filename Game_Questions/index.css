@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-background {
+    background-image: linear-gradient(#6b7fd7ff, #4c2a85a9);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px;
+    border: 1px solid red;
+    height: calc(100vh - 1px);
+    position: relative;
+}
+
+header {
+    border: 1px solid red;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 70vw;
+    top: 8%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: seashell;
+}
+
+
+.attributions {
+    background-color: black;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    color: purple;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-line {
+    display: flex;
+    flex-direction: row;
+    border-radius: 40px;
+    box-shadow: 0 0 10px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: seashell
+}
+
+.nav-buttons {
+    list-style: none;
+    margin: 10px 15px;
+    padding: 10px;
+    border-radius: 40px;
+    box-shadow: 0 0 4px;
+}
+
+main {
+    font-family: 'Nunito Sans', sans-serif;
+}
