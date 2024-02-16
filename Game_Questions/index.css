@@ -7,7 +7,7 @@
 }
 
 .hero-background {
-    background-image: linear-gradient(#6b7fd7ff, #4c2a85a9);
+    background-color: #f3e5ab;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +18,7 @@
 }
 
 header {
-    border: 1px solid red;
+    border-bottom: 1px solid #000;
 
     position: absolute;
 
@@ -27,29 +27,45 @@ header {
     justify-content: space-between;
     
     width: 70vw;
-    top: 8%;
-    left: 40%;
+    top: 10%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    color: seashell;
+    color: #000;
 }
 
 .nav-line {
+    background-color: #000;
+    position: absolute;
     display: flex;
+    align-content: center;
+    justify-content: center;
     flex-direction: row;
-    border-radius: 40px;
+    border-radius: 0px;
     box-shadow: 0 0 10px;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%);
 }
 
 .nav-buttons a {
     text-decoration: none;
-    color: seashell
+    color: #999
 }
 
 .nav-buttons {
     list-style: none;
     margin: 10px 15px;
+    padding: 5px;
+    border-radius: 0px;
+    box-shadow: 0 0 4px;
+}
+
+.nav-buttons:hover {
+    list-style: none;
+    margin: 10px 15px;
     padding: 10px;
-    border-radius: 40px;
+    border-radius: 0px;
     box-shadow: 0 0 4px;
 }
 
