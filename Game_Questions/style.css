@@ -73,7 +73,7 @@ main {
 }
 
 .game-container-one {
-    background: linear-gradient(#55c1ff, #5887ff);
+    background: linear-gradient(#55c1ff92, #55c1ff);
     box-shadow: 0 0 15px;
 
     border: 4px solid blue;

@@ -2,11 +2,11 @@
 // clock face images to .svg
 // clocks
 
-const clocks = document.querySelector('.clock-face');
+/* const clocks = document.querySelector('.clock-face');
 const timeInput = document.getElementById('time-answer');
 const timeBtn = document.querySelector('.time-enter');
 const timeResult = document.querySelector('.c-container');
-const clockBg = document.getElementById('clock-entry');
+const clockBg = document.getElementById('clock-entry'); */
 
 const gameBox = document.querySelector('.main-container');
 const mainContainer = document.querySelector('.m-container');
