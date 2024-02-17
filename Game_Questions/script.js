@@ -86,7 +86,7 @@ window.addEventListener('load', function(){
         const gameContainerOne = document.querySelectorAll('.game-container-one');
             submitButton.addEventListener('click', function(){
                 if(entryInput.value === clockFaces[i].time){
-                    gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)";         
+                    gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)";
                 }    
             });
     };

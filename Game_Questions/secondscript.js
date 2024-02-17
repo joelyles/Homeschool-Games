@@ -11,32 +11,32 @@ const gameBox = document.querySelector('.main-container');
 const spellingWords = [
     {
         id: 1,
-        word: `cat`,
+        answer: `cat`,
         // cat photo by Kabo on Unsplash
         pic:   `<img src="images/kabo.jpg"/>`
     } ,  {
         id: 2,
-        word: `horse`,
+        answer: `horse`,
         pic:   `<img src="images/magdalena-smolnicka.jpg"/>`
         // horse photo by Magdalena Smolnicka on Unsplash
     },  {
         id: 3,
-        word: `barn`,
+        answer: `barn`,
         pic: `<img src="images/remmington-wanner.jpg"/>`
         // barn photo by Remmington Wanner on Unsplash
     },  {
         id: 4,
-        word: `mouse`,
+        answer: `mouse`,
         pic: `<img src="images/glen-hooper.jpg"/>`
         // mouse photo by Glen Hooper on Unsplash
     },  {
         id: 5,
-        word: `bat`,
+        answer: `bat`,
         pic: `<img src="images/geoff-brooks.jpg"/>`
         // bat photo by Geoff Brooks on Unsplash
     },  {
         id: 6,
-        word: `bird`,
+        answer: `bird`,
         pic: `<img src="images/timothy-dykes.jpg"/>`
         // bird photo by Timothy Dykes on Unsplash
     },  {
@@ -46,7 +46,7 @@ const spellingWords = [
         // deer photo by Laura College on Unsplash
     },  {
         id: 8,
-        word: `boat`,
+        answer: `boat`,
         pic: `<img src="images/dusan-veverkolog.jpg"/>`
         // boat photo by Dusan Veverkolog on Unsplash
     },
@@ -60,21 +60,33 @@ window.addEventListener('load', function() {
         const submitButton = document.createElement('button');
         const questionNumber = document.createElement('div');
 
-        gameBox.append(newDiv);
         newDiv.innerHTML = spellingWords[i].pic;
+        gameBox.append(newDiv);
         newDiv.classList.add('game-container-one');
 
-        newDiv.append(entryBox);
+        newDiv.append(entryBox, questionNumber);
         entryBox.innerHTML = 'type correct spelling below';
         entryBox.classList.add('entry-container');
 
-        entryBox.append(entryInput, submitButton);
-        entryInput.classList.add('time-answer');
+        entryBox.append(entryInput);
+        entryInput.classList.add('spelling-answer');
 
-    }
- 
+        entryBox.append(submitButton);
+        submitButton.classList.add('spelling-enter');
+        submitButton.innerHTML = "check spelling";
 
-})
+        questionNumber.innerHTML = spellingWords[i].id;
+        questionNumber.classList.add('question-number');
+
+        const gameContainerOne = document.querySelectorAll('.game-container-one');
+            submitButton.addEventListener('click', function(){
+                if(entryInput.value.toLowerCase() === spellingWords[i].answer){
+                    console.log('it worked!');
+                   /*  gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)"; */
+                }
+            });   
+    }; 
+});
 
 
 /* let randomWords = Math.floor(Math.random() * spellingWords.length);
