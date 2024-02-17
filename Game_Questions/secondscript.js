@@ -41,7 +41,7 @@ const spellingWords = [
         // bird photo by Timothy Dykes on Unsplash
     },  {
         id: 7,
-        word: `deer`,
+        answer: `deer`,
         pic: `<img src="images/laura-college.jpg"/>`
         // deer photo by Laura College on Unsplash
     },  {
@@ -52,8 +52,9 @@ const spellingWords = [
     },
 ];
 
-window.addEventListener('load', function() {
-    for (i = 0; i < spellingWords.length; i++) {
+window.addEventListener('load', function(){
+
+    for (let i = 0; i < spellingWords.length; i++) {
         const newDiv = document.createElement('div');
         const entryBox = document.createElement('div');
         const entryInput = document.createElement('input');
@@ -81,8 +82,7 @@ window.addEventListener('load', function() {
         const gameContainerOne = document.querySelectorAll('.game-container-one');
             submitButton.addEventListener('click', function(){
                 if(entryInput.value.toLowerCase() === spellingWords[i].answer){
-                    console.log('it worked!');
-                   /*  gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)"; */
+                    gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)";
                 }
             });   
     }; 
