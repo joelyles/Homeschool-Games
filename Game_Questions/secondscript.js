@@ -83,6 +83,9 @@ window.addEventListener('load', function(){
             submitButton.addEventListener('click', function(){
                 if(entryInput.value.toLowerCase() === spellingWords[i].answer){
                     gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)";
+                    gameContainerOne[i].classList = 'game-container-one';
+                } else { 
+                    gameContainerOne[i].classList.toggle("active");
                 }
             });   
     }; 
