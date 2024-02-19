@@ -1,11 +1,5 @@
 // spelling
 
-/* const spelling = document.querySelector('.spelling');
-const spellingInput = document.getElementById('spelling-answer');
-const spellingBtn = document.querySelector('.spelling-enter');
-const spellingResult = document.querySelector('.s-container');
-const spellingBg = document.getElementById('spelling-entry'); */
-
 const gameBox = document.querySelector('.main-container');
 
 const spellingWords = [
@@ -90,27 +84,3 @@ window.addEventListener('load', function(){
             });   
     }; 
 });
-
-
-/* let randomWords = Math.floor(Math.random() * spellingWords.length);
-
-spellingBtn.addEventListener('click', function(){
-    if(spellingInput.value.toLowerCase() === spellingWords[randomWords].word){
-        spellingResult.textContent = "correct!";
-
-        spellingBg.style.backgroundColor = '#7cfc00';
-
-        spellingResult.style.color = "green";
-        spellingResult.style.fontSize = "48px"
-        sectionThree.scrollIntoView({behavior: 'smooth'});
-    } else {
-        spellingResult.textContent = "sorry, try again.";
-        spellingResult.style.color = "red";
-        spellingResult.style.fontSize = "48px"
-        spellingInput.value = "";
-    }
-});
-
-window.addEventListener('load', function(){
-    spelling.innerHTML = spellingWords[randomWords].pic;
-}); */
