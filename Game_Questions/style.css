@@ -69,7 +69,36 @@ main {
     
 }
 
+.math-container {
+    border: 4px solid orange;
+    margin: 50px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 85%;
+    
+}
+
 .game-container-one {
+    background: linear-gradient(#55c1ff92, #55c1ff);
+    box-shadow: 0 0 15px;
+
+    border: 4px solid blue;
+    border-radius: 10px;
+
+    margin: 25px 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 700px;
+    max-width: 100%;
+    position: relative;
+}
+
+.game-container-math {
     background: linear-gradient(#55c1ff92, #55c1ff);
     box-shadow: 0 0 15px;
 

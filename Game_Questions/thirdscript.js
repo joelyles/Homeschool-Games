@@ -1,37 +1,49 @@
 // math
 
-const math = document.querySelector('.math');
+/* const math = document.querySelector('.math');
 const mathInput = document.getElementById('math-answer');
 const mathBtn = document.querySelector('.math-enter');
 const mathResult = document.querySelector('.m-container');
 const mathBg = document.getElementById('math-entry');
+ */
+const mathFactsFour = [0, 1, 2, 3, 4];
+const mathFactsNine = [5, 6, 7, 8, 9];
 
-const mathFacts = [
-    {
-        question: `1 + 1`,
-        answer: `2`
-    }, {
-        question: `2 + 4`,
-        answer: `6`
-    }, {
-        question: `3 + 3`,
-        answer: `6`
-    }, {
-        question: `4 + 4`,
-        answer: `8`
-    }, {
-        question: `9 + 1`,
-        answer: `10`
-    }, {
-        question: `5 + 4`,
-        answer: `9`
-    }, {
-        question: `7 + 1`,
-        answer: `8`
-    }, 
-];
 
-let randomMath = Math.floor(Math.random() * mathFacts.length);
+
+const gameBox = document.querySelector('.math-container');
+
+window.addEventListener('load', function() {
+
+    for (let i = 0; i < mathFactsFour.length; i++) {
+        const newDiv = document.createElement('div');
+        const numOne = document.createElement('div');
+        const oper = document.createElement('div');
+        const numTwo = document.createElement('div');
+        const entryBox = document.createElement('div');
+        const entryInput = document.createElement('input');
+        const submitButton = document.createElement('button');
+        const questionNumber = document.createElement('div');
+        const selectNumber = Math.floor(Math.random() * 5);
+        const selectNumberTwo = Math.floor(Math.random() * 5);
+
+        gameBox.append(newDiv);
+        newDiv.appendChild(numOne);
+        newDiv.appendChild(oper);
+        newDiv.appendChild(numTwo);
+        numOne.innerHTML = mathFactsFour[selectNumber];
+        oper.innerHTML = '+';
+        numTwo.innerHTML = mathFactsNine[selectNumber];
+
+        newDiv.classList.add('game-container-math');
+        gameBox.classList.add('math-container');
+        
+    }
+});
+
+
+
+/* let randomMath = Math.floor(Math.random() * mathFacts.length);
 
 mathBtn.addEventListener('click', function() {
     if(mathInput.value === mathFacts[randomMath].answer) {
@@ -42,7 +54,7 @@ mathBtn.addEventListener('click', function() {
         mathResult.style.color = "green";
         mathResult.style.fontSize = "48px"
 
-  /*       sectionFour.scrollIntoView({behavior: 'smooth'}); */
+         sectionFour.scrollIntoView({behavior: 'smooth'});
     } else {
         mathResult.innerHTML = 'sorry, try again';
         mathResult.style.color = "#AA767C";
@@ -55,4 +67,4 @@ mathBtn.addEventListener('click', function() {
 
 window.addEventListener('load', function(){
     math.innerHTML = mathFacts[randomMath].question;
-});
+}); */
