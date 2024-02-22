@@ -11,12 +11,13 @@ const mathFactsNine = [5, 6, 7, 8, 9];
 
 
 
-const gameBox = document.querySelector('.math-container');
+const gameBox = document.querySelector('.main-container');
 
 window.addEventListener('load', function() {
 
-    for (let i = 0; i < mathFactsFour.length; i++) {
+    for (let i = 0; i < 10; i++) {
         const newDiv = document.createElement('div');
+        const newMathDiv = document.createElement('div');
         const numOne = document.createElement('div');
         const oper = document.createElement('div');
         const numTwo = document.createElement('div');
@@ -28,17 +29,38 @@ window.addEventListener('load', function() {
         const selectNumberTwo = Math.floor(Math.random() * 5);
 
         gameBox.append(newDiv);
-        newDiv.appendChild(numOne);
-        newDiv.appendChild(oper);
-        newDiv.appendChild(numTwo);
+        newDiv.classList.add('game-container-one');
+
+        newDiv.append(newMathDiv);
+        newMathDiv.classList.add('new-math-div');
+
+        newMathDiv.appendChild(numOne);
+        newMathDiv.appendChild(oper);
+        newMathDiv.appendChild(numTwo);
         numOne.innerHTML = mathFactsFour[selectNumber];
         oper.innerHTML = '+';
         numTwo.innerHTML = mathFactsNine[selectNumber];
-
-        newDiv.classList.add('game-container-math');
-        gameBox.classList.add('math-container');
         
-    }
+
+        newDiv.appendChild(entryBox);
+        entryBox.classList.add('entry-container');
+
+        entryBox.appendChild(entryInput);
+        entryInput.classList.add('math-answer');
+
+        entryBox.appendChild(submitButton);
+        submitButton.classList.add('math-enter');
+        submitButton.innerHTML = "check answer";
+
+        const sum = mathFactsFour[selectNumber] + mathFactsNine[selectNumber];
+        
+
+        submitButton.addEventListener ('click', function(){
+             if (Number(entryInput.value) === sum) {
+            console.log('yes');
+        }
+        });
+    };
 });
 
 
