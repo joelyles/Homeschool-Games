@@ -247,6 +247,7 @@ h4 {
     border: 2px solid red;
     font-size: 40px;
     max-height: 50px;
+    min-width: 100px;
 }
 
 @media (max-width: 1000px) {
@@ -260,6 +261,8 @@ h4 {
     }
     
     .nav-plus {
-        display: block;
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 }
