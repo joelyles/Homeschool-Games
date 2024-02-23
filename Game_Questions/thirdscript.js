@@ -1,16 +1,7 @@
 // math
 
-/* const math = document.querySelector('.math');
-const mathInput = document.getElementById('math-answer');
-const mathBtn = document.querySelector('.math-enter');
-const mathResult = document.querySelector('.m-container');
-const mathBg = document.getElementById('math-entry');
- */
 const mathFactsFour = [0, 1, 2, 3, 4];
 const mathFactsNine = [5, 6, 7, 8, 9];
-
-
-
 const gameBox = document.querySelector('.main-container');
 
 window.addEventListener('load', function() {
@@ -53,12 +44,12 @@ window.addEventListener('load', function() {
         submitButton.innerHTML = "check answer";
 
         const sum = mathFactsFour[selectNumber] + mathFactsNine[selectNumber];
-        
+        const containerOne = document.querySelectorAll('.game-container-one');
 
         submitButton.addEventListener ('click', function(){
              if (Number(entryInput.value) === sum) {
-            console.log('yes');
-        }
+                containerOne[i].style.background = "linear-gradient(#74E365, #008000)";
+            }
         });
     };
 });
