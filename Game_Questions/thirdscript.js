@@ -6,7 +6,7 @@ const gameBox = document.querySelector('.main-container');
 
 window.addEventListener('load', function() {
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 5; i++) {
         const newDiv = document.createElement('div');
         const newMathDiv = document.createElement('div');
         const numOne = document.createElement('div');
@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
         const entryInput = document.createElement('input');
         const submitButton = document.createElement('button');
         const questionNumber = document.createElement('div');
-        const selectNumber = Math.floor(Math.random() * 5);
+        const selectNumber = mathFactsFour[i];
         const selectNumberTwo = Math.floor(Math.random() * 5);
 
         gameBox.append(newDiv);
