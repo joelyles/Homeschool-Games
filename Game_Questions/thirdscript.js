@@ -3,6 +3,18 @@
 const mathFactsFour = [0, 1, 2, 3, 4];
 const mathFactsNine = [5, 6, 7, 8, 9];
 const gameBox = document.querySelector('.main-container');
+const wrong = [
+    { transform: "translateX(-2%)"},
+    { transform: "translateX(2%)"},
+    { transform: "translateX(-2%)"},
+    { transform: "translateX(0%)"},
+]
+const wrongDuration = {duration: 500};
+const yes = [
+    { transform: "scale(100%)" },
+    { transform: "scale(104%)" },
+    { transform: "scale(100%)" },
+]
 
 window.addEventListener('load', function() {
 
@@ -49,6 +61,11 @@ window.addEventListener('load', function() {
         submitButton.addEventListener ('click', function(){
              if (Number(entryInput.value) === sum) {
                 containerOne[i].style.background = "linear-gradient(#74E365, #008000)";
+                containerOne[i].animate(yes, wrongDuration);
+            } else if (Number(entryInput.value) !== sum) {
+                containerOne[i].animate(wrong, wrongDuration);
+            } else {
+                
             }
         });
     };
