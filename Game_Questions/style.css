@@ -240,9 +240,26 @@ h4 {
     transform: scale(1);
 }
 
-@media (max-width: 1000px) {
-    .game-container {
-        flex-direction: column;
+/* navigation */
 
+.nav-plus {
+    display: none;
+    border: 2px solid red;
+    font-size: 40px;
+    max-height: 50px;
+}
+
+@media (max-width: 1000px) {
+    .nav-line {
+        flex-direction: column;
+        display: none;
+    }
+    
+    .bye {
+        display: block;
+    }
+    
+    .nav-plus {
+        display: block;
     }
 }
