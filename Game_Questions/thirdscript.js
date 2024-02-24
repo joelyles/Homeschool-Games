@@ -55,6 +55,13 @@ window.addEventListener('load', function() {
         submitButton.classList.add('math-enter');
         submitButton.innerHTML = "check answer";
 
+        newDiv.append(questionNumber);
+        questionNumber.classList.add('question-number');
+
+            for (n = 0; n <= i + 1; n++) {
+                questionNumber.innerHTML = n;
+            }
+
         const sum = mathFactsFour[selectNumber] + mathFactsNine[selectNumber];
         const containerOne = document.querySelectorAll('.game-container-one');
 
@@ -70,31 +77,3 @@ window.addEventListener('load', function() {
         });
     };
 });
-
-
-
-/* let randomMath = Math.floor(Math.random() * mathFacts.length);
-
-mathBtn.addEventListener('click', function() {
-    if(mathInput.value === mathFacts[randomMath].answer) {
-        mathResult.innerHTML = 'correct!';
-
-        mathBg.style.backgroundColor = '#7cfc00';
-        
-        mathResult.style.color = "green";
-        mathResult.style.fontSize = "48px"
-
-         sectionFour.scrollIntoView({behavior: 'smooth'});
-    } else {
-        mathResult.innerHTML = 'sorry, try again';
-        mathResult.style.color = "#AA767C";
-        mathResult.style.backgroundColor = "#FFFFFF";
-        mathResult.style.borderRadius = "10px";
-        mathResult.style.fontSize = "48px"
-        mathInput.value = "";
-    }
-});
-
-window.addEventListener('load', function(){
-    math.innerHTML = mathFacts[randomMath].question;
-}); */
