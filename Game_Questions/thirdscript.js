@@ -3,18 +3,18 @@
 const mathFactsFour = [0, 1, 2, 3, 4];
 const mathFactsNine = [5, 6, 7, 8, 9];
 const gameBox = document.querySelector('.main-container');
+const right = [
+    { transform: "scale(100%)" },
+    { transform: "scale(104%)" },
+    { transform: "scale(100%)" },
+]
 const wrong = [
     { transform: "translateX(-2%)"},
     { transform: "translateX(2%)"},
     { transform: "translateX(-2%)"},
     { transform: "translateX(0%)"},
 ]
-const wrongDuration = {duration: 500};
-const yes = [
-    { transform: "scale(100%)" },
-    { transform: "scale(104%)" },
-    { transform: "scale(100%)" },
-]
+const animateDuration = {duration: 500};
 
 window.addEventListener('load', function() {
 
@@ -44,7 +44,6 @@ window.addEventListener('load', function() {
         oper.innerHTML = '+';
         numTwo.innerHTML = mathFactsNine[selectNumber];
         
-
         newDiv.appendChild(entryBox);
         entryBox.classList.add('entry-container');
 
@@ -68,9 +67,9 @@ window.addEventListener('load', function() {
         submitButton.addEventListener ('click', function(){
              if (Number(entryInput.value) === sum) {
                 containerOne[i].style.background = "linear-gradient(#74E365, #008000)";
-                containerOne[i].animate(yes, wrongDuration);
+                containerOne[i].animate(right, animateDuration);
             } else if (Number(entryInput.value) !== sum) {
-                containerOne[i].animate(wrong, wrongDuration);
+                containerOne[i].animate(wrong, animateDuration);
             } else {
                 
             }

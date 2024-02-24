@@ -2,6 +2,18 @@
 
 const gameBox = document.querySelector('.main-container');
 const mainContainer = document.querySelector('.m-container');
+const right = [
+    { transform: 'scale(100%)' },
+    { transform: 'scale(104%)' },
+    { transform: 'scale(100%)' }
+];
+const wrong = [
+    { transform: 'translateX(-2%)' },
+    { transform: 'translateX(0%)' },
+    { transform: 'translateX(2%)' },
+    { transform: 'translateX(0%)' },
+];
+const animateDuration = { duration: 500 };
 
 const clockFaces = [
     /* {
@@ -75,7 +87,10 @@ window.addEventListener('load', function(){
             submitButton.addEventListener('click', function(){
                 if(entryInput.value === clockFaces[i].time){
                     gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)";
-                }    
+                    gameContainerOne[i].animate(right, animateDuration);
+                } else if (entryInput.value !== clockFaces[i].time){
+                    gameContainerOne[i].animate(wrong, animateDuration);
+                }
             });
     };
 });

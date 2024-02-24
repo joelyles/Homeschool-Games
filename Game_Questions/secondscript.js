@@ -1,6 +1,18 @@
 // spelling
 
 const gameBox = document.querySelector('.main-container');
+const right = [
+    { transform: "scale(100%)" },
+    { transform: "scale(104%)" },
+    { transform: "scale(100%)" }
+];
+const wrong = [
+    { transform: "translateX(-2%)" },
+    { transform: "translateX(0%)" },
+    { transform: "translateX(2%)" },
+    { transform: "translateX(0%)" },
+];
+const animateDuration = { duration: 500 };
 
 const spellingWords = [
     {
@@ -77,9 +89,9 @@ window.addEventListener('load', function(){
             submitButton.addEventListener('click', function(){
                 if(entryInput.value.toLowerCase() === spellingWords[i].answer){
                     gameContainerOne[i].style.background = "linear-gradient(#74E365, #008000)";
-                    gameContainerOne[i].classList = 'game-container-one';
-                } else { 
-                    gameContainerOne[i].classList.toggle("active");
+                    gameContainerOne[i].animate(right, animateDuration);
+                } else if (entryInput.value.toLowerCase() !== spellingWords[i].answer){ 
+                    gameContainerOne[i].animate(wrong, animateDuration);
                 }
             });   
     }; 
