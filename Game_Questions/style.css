@@ -43,6 +43,35 @@ header {
     background-color: aliceblue;
 }
 
+.m-container {
+    position: relative;
+}
+
+.side-scroll {
+    border: 2px solid red;
+    position: fixed;
+    top: 30%;
+    right: 2.5%;
+}
+
+.side-scroll .up {
+    transform: rotate(180deg);
+    font-size: 100px;
+}
+
+.side-scroll .down {
+    font-size: 100px;
+}
+
+.next-scroll {
+    display: flex;
+    border: 2px solid red;
+}
+.right {
+    display: flex;
+    transform: rotate(270deg);
+}
+
 main {
     background-color: aliceblue;
     min-width: 848px;
