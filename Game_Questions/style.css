@@ -18,7 +18,7 @@ header {
     z-index: 9999;
     background-color: #55c1ff;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     box-shadow: 0 0 10px;
 }
 
@@ -41,6 +41,14 @@ header {
     border-radius: 10px;
     box-shadow: 0 0 4px;
     background-color: aliceblue;
+}
+
+.nav-buttons:hover {
+    transform: scale(104%);
+}
+
+.nav-buttons:active {
+    transform: scale(98%);
 }
 
 .m-container {

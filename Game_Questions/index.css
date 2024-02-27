@@ -11,19 +11,30 @@ body {
 }
 
 header {
-    border-bottom: 1px solid #000;
     background-color: #55c1ff;
     position: absolute;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     box-shadow: 0 0 10px;
     width: 100%;
-  /*   top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     color: #000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: aliceblue;
+    /* border: 2px solid black; */
+    box-shadow: 0 0 5px;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    top: 10px;
+    left: 20px;
 }
 
 .nav-line {
@@ -34,6 +45,7 @@ header {
 }
 
 .nav-buttons a {
+    
     text-decoration: none;
     color: navy;
 }
@@ -48,13 +60,34 @@ header {
 }
 
 .nav-buttons:hover {
-    list-style: none;
-    margin: 10px 15px;
-    padding: 10px;
-    border-radius: 0px;
-    box-shadow: 0 0 4px;
+    transform: scale(104%);
+}
+
+.nav-buttons:active {
+    transform: scale(98%);
 }
 
 main {
     font-family: 'Nunito Sans', sans-serif;
+}
+
+.hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 2px solid navy;
+}
+
+.hero-text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    height: 60%;
+    width: 60%;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    text-transform: lowercase;
+    text-shadow: 15 15 15;
+    font-size: xx-large;
 }
