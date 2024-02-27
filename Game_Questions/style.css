@@ -71,6 +71,24 @@ header {
     font-size: 100px;
 }
 
+.side-scroll .up:hover {
+    transform: rotate(180deg) scale(104%);
+    cursor: pointer;
+}
+
+.side-scroll .down:hover {
+    transform: scale(104%);
+    cursor: pointer;
+}
+
+.side-scroll .up:active {
+    transform: rotate(180deg) scale(98%);
+}
+
+.side-scroll .down:active {
+    transform: scale(98%);
+}
+
 .next-scroll {
     display: flex;
     border: 2px solid red;

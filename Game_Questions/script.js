@@ -1,5 +1,8 @@
 // clocks
 
+const scrollDown = document.querySelector('.down');
+const scrollUp = document.querySelector('.up');
+
 const gameBox = document.querySelector('.main-container');
 const mainContainer = document.querySelector('.m-container');
 const right = [
@@ -93,4 +96,12 @@ window.addEventListener('load', function(){
                 }
             });
     };
+});
+
+scrollDown.addEventListener('click', function() {
+    window.scrollBy({top: 412, left: 0, behavior: 'smooth'},);
+});
+
+scrollUp.addEventListener('click', function() {
+    window.scrollBy({top: -412, left: 0, behavior: 'smooth'},);
 });
