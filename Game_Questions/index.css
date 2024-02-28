@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -28,7 +32,6 @@ header {
     justify-content: center;
     position: absolute;
     background-color: aliceblue;
-    /* border: 2px solid black; */
     box-shadow: 0 0 5px;
     border-radius: 50%;
     height: 200px;
@@ -45,7 +48,6 @@ header {
 }
 
 .nav-buttons a {
-    
     text-decoration: none;
     color: navy;
 }
@@ -76,7 +78,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    border-bottom: 2px solid navy;
 }
 
 .hero-text {
@@ -90,4 +91,65 @@ main {
     text-transform: lowercase;
     text-shadow: 15 15 15;
     font-size: xx-large;
+}
+
+.about {
+    background-color: #55c1ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px;
+    height: calc(50vh - 1px);
+}
+
+.about-text {
+    max-width: 54%;
+    line-height: 1.5;
+    margin: 5px;
+    padding: 10px;
+}
+
+.about-pic {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.abacus {
+    margin-bottom: 40px;
+    transform: scale(19%);
+    object-fit: cover;
+}
+
+.footer {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: grey;
+    opacity: 90%;
+    height: 20vh;
+    padding: 2%;
+}
+
+.footer-text {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    color: black;
+    opacity: 70%;
+    font-size: 22px;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
 }
