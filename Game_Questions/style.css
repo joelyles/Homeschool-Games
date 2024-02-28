@@ -56,7 +56,6 @@ header {
 }
 
 .side-scroll {
-    border: 2px solid red;
     position: fixed;
     top: 30%;
     right: 2.5%;

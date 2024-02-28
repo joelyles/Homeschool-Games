@@ -1,5 +1,8 @@
 // spelling
 
+const scrollDown = document.querySelector('.down');
+const scrollUp = document.querySelector('.up');
+
 const gameBox = document.querySelector('.main-container');
 const right = [
     { transform: "scale(100%)" },
@@ -95,4 +98,12 @@ window.addEventListener('load', function(){
                 }
             });   
     }; 
+});
+
+scrollDown.addEventListener('click', function (){
+    window.scrollBy({top: 412, left: 0, behavior: "smooth"},)
+});
+
+scrollUp.addEventListener('click', function (){
+    window.scrollBy({top: -412, left: 0, behavior: "smooth"},)
 });

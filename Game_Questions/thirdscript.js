@@ -1,5 +1,8 @@
 // math
 
+const scrollDown = document.querySelector('.down');
+const scrollUp = document.querySelector('.up');
+
 const mathFactsFour = [0, 1, 2, 3, 4];
 const mathFactsNine = [5, 6, 7, 8, 9];
 const gameBox = document.querySelector('.main-container');
@@ -75,4 +78,12 @@ window.addEventListener('load', function() {
             }
         });
     };
+});
+
+scrollDown.addEventListener('click', function (){
+    window.scrollBy({top: 310, left: 0, behavior: "smooth"},)
+});
+
+scrollUp.addEventListener('click', function (){
+    window.scrollBy({top: -312, left: 0, behavior: "smooth"},)
 });
