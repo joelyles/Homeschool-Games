@@ -3,8 +3,8 @@
 const scrollDown = document.querySelector('.down');
 const scrollUp = document.querySelector('.up');
 
-const mathFactsFour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const mathFactsNine = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+const mathFactsOne = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const mathFacts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const gameBox = document.querySelector('.main-container');
 const right = [
     { transform: "scale(100%)" },
@@ -21,7 +21,7 @@ const animateDuration = {duration: 500};
 
 window.addEventListener('load', function() {
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < mathFactsOne.length; i++) {
         const newDiv = document.createElement('div');
         const newMathDiv = document.createElement('div');
         const numOne = document.createElement('div');
@@ -31,7 +31,8 @@ window.addEventListener('load', function() {
         const entryInput = document.createElement('input');
         const submitButton = document.createElement('button');
         const questionNumber = document.createElement('div');
-        const selectNumber = mathFactsFour[i];
+        const selectNumber = mathFactsOne[i];
+        const random = Math.floor(Math.random() * mathFacts.length);
 
         gameBox.append(newDiv);
         newDiv.classList.add('game-container-one');
@@ -42,9 +43,9 @@ window.addEventListener('load', function() {
         newMathDiv.appendChild(numOne);
         newMathDiv.appendChild(oper);
         newMathDiv.appendChild(numTwo);
-        numOne.innerHTML = mathFactsFour[selectNumber];
+        numOne.innerHTML = mathFactsOne[selectNumber];
         oper.innerHTML = '+';
-        numTwo.innerHTML = mathFactsNine[selectNumber];
+        numTwo.innerHTML = mathFacts[random];
         
         newDiv.appendChild(entryBox);
         entryBox.classList.add('entry-container');
@@ -63,7 +64,7 @@ window.addEventListener('load', function() {
                 questionNumber.innerHTML = n;
             }
 
-        const sum = mathFactsFour[selectNumber] + mathFactsNine[selectNumber];
+        const sum = mathFactsOne[selectNumber] + mathFacts[random];
         const containerOne = document.querySelectorAll('.game-container-one');
 
         submitButton.addEventListener ('click', function(){
