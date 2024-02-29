@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -289,7 +293,6 @@ h4 {
 
 .nav-plus {
     display: none;
-    border: 2px solid red;
     font-size: 40px;
     max-height: 50px;
     min-width: 100px;
@@ -309,10 +312,11 @@ h4 {
         display: flex;
         text-align: center;
         justify-content: center;
+        cursor: pointer;
     }
 
     header {
         justify-content: center;
-        width: 15vw;
+        width: 20vw;
     }
 }
