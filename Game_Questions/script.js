@@ -25,7 +25,7 @@ const clockFaces = [
     },   */
     {
         question: `1`,
-        time: `1200`,
+        time: `12`,
         picture: `<img src="images/clocks12.jpg"/>`
     },  {
         question: 2,
@@ -45,15 +45,15 @@ const clockFaces = [
         picture: `<img src="images/clocks1030.jpg"/>`
     },  {
         question: 6,
-        time: `500`,
+        time: `5`,
         picture: `<img src="images/clocks5.jpg"/>`
     },  {
         question: 7,
-        time: `900`,
+        time: `9`,
         picture: `<img src="images/clocks9.jpg"/>`
     }, {
         question: 8,
-        time: `1100`,
+        time: `11`,
         picture: `<img src="images/clocks11.jpg"/>`
     },
 ];
