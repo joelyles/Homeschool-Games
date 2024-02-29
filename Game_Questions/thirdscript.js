@@ -3,8 +3,8 @@
 const scrollDown = document.querySelector('.down');
 const scrollUp = document.querySelector('.up');
 
-const mathFactsFour = [0, 1, 2, 3, 4];
-const mathFactsNine = [5, 6, 7, 8, 9];
+const mathFactsFour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const mathFactsNine = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 const gameBox = document.querySelector('.main-container');
 const right = [
     { transform: "scale(100%)" },
@@ -21,7 +21,7 @@ const animateDuration = {duration: 500};
 
 window.addEventListener('load', function() {
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
         const newDiv = document.createElement('div');
         const newMathDiv = document.createElement('div');
         const numOne = document.createElement('div');
@@ -32,7 +32,6 @@ window.addEventListener('load', function() {
         const submitButton = document.createElement('button');
         const questionNumber = document.createElement('div');
         const selectNumber = mathFactsFour[i];
-        const selectNumberTwo = Math.floor(Math.random() * 5);
 
         gameBox.append(newDiv);
         newDiv.classList.add('game-container-one');
@@ -81,9 +80,9 @@ window.addEventListener('load', function() {
 });
 
 scrollDown.addEventListener('click', function (){
-    window.scrollBy({top: 310, left: 0, behavior: "smooth"},)
+    window.scrollBy({top: 342, left: 0, behavior: "smooth"},)
 });
 
 scrollUp.addEventListener('click', function (){
-    window.scrollBy({top: -312, left: 0, behavior: "smooth"},)
+    window.scrollBy({top: -342, left: 0, behavior: "smooth"},)
 });
